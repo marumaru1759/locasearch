@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view class="bodyback"></router-view>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -19,24 +19,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-</style>
-
-<style scoped>
-.bodyback{
-  background:url( "./assets/guam.jpg") center no-repeat; background-size: cover;
-  height: 100%;
-  background-color: #333;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-pack: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  color: #fff;
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-}
-
-
 </style>
 

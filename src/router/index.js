@@ -6,4 +6,4 @@ import routes from './routes'
 
 Vue.use(Router)
 
-export default nes Router({ routes })
+export default new Router({ routes })

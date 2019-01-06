@@ -27,10 +27,14 @@ a:hover {
 html,
 body {
 	height: 100%;
-        background:url( "../../assets/guam.jpg") center no-repeat;
 	background-size: cover;
 	background-color: #333;
 }
+
+/*
+* background:url("../../assets/guam.jpg") center no-repeat
+*/
+
 
 body {
   display: -ms-flexbox;

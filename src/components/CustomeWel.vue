@@ -13,7 +13,7 @@
 
 	<main role="main" class="inner cover">
         	<h1 class="cover-heading">ロケサーチ（仮）</h1>
-        	<p class="lead">あなたの行きたい場所を見つけるサイト</p>
+        	<p class="lead midlang">あなたの行きたい場所を見つけるサイト</p>
         	<p class="lead">
 		<router-link to="/register" class="btn btn-lg btn-secondary">新規登録</router-link>
         	</p>
@@ -48,6 +48,11 @@ export default {
 
 <style>
 h1, h2 {
+  font-weight: normal;
+  color: #ffffff
+}
+
+h3 {
   font-weight: normal;
   color: #ffffff
 }

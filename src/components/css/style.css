@@ -29,11 +29,8 @@ body {
 	height: 100%;
 	background-size: cover;
 	background-color: #333;
+	background:url("../../assets/guam.jpg") center no-repeat
 }
-
-/*
-* background:url("../../assets/guam.jpg") center no-repeat
-*/
 
 
 body {
@@ -106,6 +103,9 @@ body {
   font-weight: 700;
 }
 
+.midlang{
+  color: #ffffff;
+}
 
 /*
  * Footer

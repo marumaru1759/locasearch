@@ -5,14 +5,14 @@
           <form action="" method="post" class="form-horizontal">
               
             <div class="form-group">
-              <label for="input_name" class="col-md-2 control-label">名前：</label>
+              <label for="input_name" class="col-md-2 control-label midlang">名前：</label>
               <div class="col-md-10">
                 <input type="text" class="form-control" id="login_name" placeholder="Name" /><br />
               </div>
             </div>
             
             <div class="form-group">
-              <label for="input_password" class="col-md-2 control-label">パスワード：</label>
+              <label for="input_password" class="col-md-2 control-label midlang">パスワード：</label>
               <div class="col-md-10">
                 <input type="password" class="form-control" id="input_password" placeholder="Password" /></label><br />
               </div>

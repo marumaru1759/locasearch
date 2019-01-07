@@ -15,7 +15,7 @@
         	<h1 class="cover-heading">ロケサーチ（仮）</h1>
         	<p class="lead midlang">あなたの行きたい場所を見つけるサイト</p>
         	<p class="lead">
-		<router-link to="/register" class="btn btn-lg btn-secondary">新規登録</router-link>
+		<router-link to="/register" class="btn btn-lg btn-primary">新規登録</router-link>
         	</p>
         </main>
 

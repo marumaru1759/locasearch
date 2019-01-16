@@ -29,7 +29,7 @@
 </template>
 
 <script>
-<!-- something will be added here -->
+//-- something will be added here
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

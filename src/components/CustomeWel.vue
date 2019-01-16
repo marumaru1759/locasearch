@@ -32,7 +32,7 @@
 </template>
 
 <script>
-<!--No script -->
+//--No script
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -2,7 +2,7 @@
 <div>
    <div id="user-list">UserList</div>
    <div v-for="user in userData" :key="user.id">
-   	<h2 class="midlang"> {{ user.name }} </h2>
+   	<h2 class="midlang"> Hi {{ user.name }} </h2>
    </div>
 </div>
 </template>

@@ -33,7 +33,7 @@ var UserList = {
 	data: function(){
 		return{
 			loading: false,
-			users: userData,
+			users: function () { return userData },
 			error: null
 		}
 	},

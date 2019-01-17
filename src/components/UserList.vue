@@ -1,6 +1,8 @@
 <template>
 <div>
-   <div id="user-list">UserList</div>
+   <div id="user-list">
+   	<h1 class="midlang">UserList</h1>
+   </div>
    <div v-for="user in userData" :key="user.id">
    	<h2 class="midlang"> Hi {{ user.name }} </h2>
    </div>

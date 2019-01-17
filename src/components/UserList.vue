@@ -1,8 +1,10 @@
 <template>
+<div>
    <div id="user-list">UserList</div>
-   <div v-for="user in userData" v-bind:key="user.id">
+   <div v-for="user in userData" :key="user.id">
    	<h2> {{ user.name }} </h2>
    </div>
+</div>
 </template>
 
 <script>

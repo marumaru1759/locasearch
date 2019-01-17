@@ -37,13 +37,22 @@ var UserList = {
 			loading: false,
 			users: function () { return userData },
 			error: null,
-			message: "hello"
+			message: ""
 		}
 	},
 
-	created: function (){
+	/*created: function (){
 		this.fetchData()
-	},
+	},*/
+
+	created: function(){
+		return{
+			loading: false,
+			users: function () { return userData },
+			error: null,
+			message: ""
+		}
+	}
 
 	
 	watch: {

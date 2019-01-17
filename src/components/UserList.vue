@@ -40,9 +40,24 @@ var UserList = {
 		}
 	},
 
-	created: function (){
+	/*created: function (){
 		this.fetchData()
-	},
+	},*/
+
+	created: 
+	var userData = [
+{
+	id:1,
+	name: 'Takuya Tajima',
+	Password: '123456'
+},{
+	id:2,
+	name: 'Yohei Noda',
+	Password: '123456'
+}
+]
+
+	
 
 	watch: {
 		'$route': 'fetchData'

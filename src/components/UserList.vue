@@ -12,7 +12,8 @@
 </template>
 
 <script>
-var userData = [
+export default {
+const userData = [
 {
 	id:1,
 	name: 'Takuya Tajima',
@@ -24,13 +25,13 @@ var userData = [
 }
 ]
 
-var getUsers = function(callback){
+const getUsers = function(callback){
 	setTimeoout(function(){
 		callback(null, userData)
 	},1000)
 }
 
-var UserList = {
+const UserList = {
 	template: '#user-list',
 	data: function(){
 		return{
@@ -63,7 +64,7 @@ var UserList = {
 		}
 	}
 }
-
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

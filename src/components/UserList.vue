@@ -3,6 +3,7 @@
    <div id="user-list">
    	<div class="loading" v-if="loading">Loading....</div>
    	<h1 class="midlang">UserList</h1>
+   	<h2>{{ message }}</h2>
    </div>
    <div v-for="user in users" :key="user.id">
    	<h2 class="midlang"> Hi {{ user.name }} </h2>
@@ -35,7 +36,8 @@ var UserList = {
 		return{
 			loading: false,
 			users: function () { return userData },
-			error: null
+			error: null,
+			message: "hello"
 		}
 	},
 

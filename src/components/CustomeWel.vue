@@ -6,6 +6,7 @@
           <nav class="nav nav-masthead justify-content-end">
             <router-link to="/info" class="nav-link">お知らせ</router-link>
             <router-link to="/mypage" class="nav-link">マイページ</router-link>
+            <router-link to="/users" class="nav-link">UsersList</router-link>
             <a class="nav-link" href="#">ログイン</a>
           </nav>
         </div>

@@ -12,7 +12,6 @@
 </template>
 
 <script>
-export default {
 var userData = [
 {
 	id:1,
@@ -64,7 +63,7 @@ var UserList = {
 		}
 	}
 }
-}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

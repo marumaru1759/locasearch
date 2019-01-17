@@ -1,6 +1,7 @@
 <template>
 <div>
    <div id="user-list">
+   	<div class="loading" v-if="loading">Loading....</div>
    	<h1 class="midlang">UserList</h1>
    </div>
    <div v-for="user in users" :key="user.id">

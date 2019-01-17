@@ -12,6 +12,7 @@
 </template>
 
 <script>
+export default {
 var userData = [
 {
 	id:1,
@@ -41,20 +42,10 @@ var UserList = {
 		}
 	},
 
-	/*created: function (){
+	created: function (){
 		this.fetchData()
-	},*/
-
-	created: function(){
-		return{
-			loading: false,
-			users: function () { return userData },
-			error: null,
-			message: ""
-		}
 	},
 
-	
 	watch: {
 		'$route': 'fetchData'
 	},
@@ -73,7 +64,7 @@ var UserList = {
 		}
 	}
 }
-
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

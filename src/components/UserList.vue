@@ -52,7 +52,7 @@ var UserList = {
 			error: null,
 			message: ""
 		}
-	}
+	},
 
 	
 	watch: {

@@ -1,6 +1,8 @@
 <template>
    <div id="user-list">UserList</div>
-   <div v-for="user in users": key="user.id"></div>
+   <div v-for="user in users": key="user.id">
+   	<h2> {{ user.name}} </h2>
+   </div>
 </template>
 
 <script src="./showlist.js"></script>

@@ -1,12 +1,12 @@
 <template>
    <div id="user-list">UserList</div>
-   <div v-for="user in users": key="user.id">
+   <div v-for="user in userData" :key="user.id">
    	<h2> {{ user.name }} </h2>
    </div>
 </template>
 
 <script>
-	var userData = [
+var userData = [
 {
 	id:1,
 	name: 'Takuya Tajima',

@@ -13,17 +13,6 @@
 
 <script>
 export default {
-const userData = [
-{
-	id:1,
-	name: 'Takuya Tajima',
-	Password: '123456'
-},{
-	id:2,
-	name: 'Yohei Noda',
-	Password: '123456'
-}
-]
 
 const getUsers = function(callback){
 	setTimeoout(function(){
@@ -36,7 +25,7 @@ const UserList = {
 	data: function(){
 		return{
 			loading: false,
-			users: function () { return userData },
+			users: function () { return this.$store.state.userData },
 			error: null,
 			message: ""
 		}

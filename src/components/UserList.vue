@@ -18,11 +18,10 @@ computed: {
 	users(){
 		return this.$store.state.userData
 	},
+},
 
 data() {
 	return { message: 'hello' }
-}
-
 },
 
 /*const getUsers = function(callback){

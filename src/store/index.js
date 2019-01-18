@@ -6,9 +6,23 @@ import mutations from './mutations'
 
 Vue.use(Vuex)
 
-export default nex Vuex.Store({
+export default new Vuex.Store({
 	getters,
 	actions,
 	mutations,
 	strict: process.env.NODE_ENV !== 'production'
+
+	state: {
+		userData: [
+		{
+			id:1,
+			name: 'Takuya Tajima',
+			Password: '123456'
+		},{
+			id:2,
+			name: 'Yohei Noda',
+			Password: '123456'
+		}
+		],
+	},
 })

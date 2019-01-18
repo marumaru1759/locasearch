@@ -19,7 +19,7 @@ computed: {
 		return this.$store.state.userData
 	},
 
-data(): {
+data() {
 	return { message: 'hello' }
 }
 

@@ -20,7 +20,7 @@ computed: {
 	},
 
 data: {
-	message: "hello"
+	message: 'hello'
 }
 
 },

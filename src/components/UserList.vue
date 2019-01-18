@@ -14,13 +14,24 @@
 <script>
 export default {
 
-const getUsers = function(callback){
+computed: {
+	users(){
+		return this.$store.state.userData
+	},
+
+data: {
+	message: "hello"
+}
+
+},
+
+/*const getUsers = function(callback){
 	setTimeoout(function(){
 		callback(null, userData)
 	},1000)
-}
+}*/
 
-const UserList = {
+/*const UserList = {
 	template: '#user-list',
 	data: function(){
 		return{
@@ -30,16 +41,16 @@ const UserList = {
 			message: ""
 		}
 	},
-
-	created: function (){
+*/
+/*	created: function (){
 		this.fetchData()
-	},
+	},*/
 
-	watch: {
+/*	watch: {
 		'$route': 'fetchData'
-	},
+	},*/
 
-	methods: {
+/*	methods: {
 		fetchData: function(){
 			this.loading = true
 			getUsers((function(err,users){
@@ -52,7 +63,7 @@ const UserList = {
 			}).bind(this))
 		}
 	}
-}
+}*/
 }
 </script>
 

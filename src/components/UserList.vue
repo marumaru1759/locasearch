@@ -6,7 +6,7 @@
    	<h2 class="midlang">{{ message }}</h2>
    </div>
    <div v-for="user in users" :key="user.id">
-   	<h2 class="midlang"> Hi {{ user.name }}. Your Password is {{ user.Password }} </h2>
+   	<h2 class="midlang"> Hi {{ user.name }}. Your Password is {{ user.password }} </h2>
    </div>
 </div>
 </template>

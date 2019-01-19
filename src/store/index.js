@@ -32,7 +32,7 @@ export default new Vuex.Store({
 		//user registration
 		userRegister (state, { name }){
 			state.userData.push({
-				id: state.nextUserId
+				id: state.nextUserId,
 				name,
 				done: false
 			})

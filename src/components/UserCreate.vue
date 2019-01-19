@@ -14,7 +14,7 @@
             <div class="form-group">
               <label for="input_password" class="col-xs-2 control-label midlang">パスワード：</label>
               <div class="col-xs-10">
-                <input type="password" class="form-control" id="input_password" placeholder="Password" /></label><br />
+                <input type="password" v-model="newPass" class="form-control" id="input_password" placeholder="Password" /></label><br />
               </div>
             </div>
             
@@ -32,7 +32,9 @@
 export default {
 
 data() {
-	return { newUser: '',}
+	return { newUser: '',
+			 newPass: ''
+			}
 	},
 
 computed:{
@@ -46,8 +48,10 @@ methods:{
 		// 'userRegister' mutation is committed here
 		this.$store.commit('userRegister',{
 			name: this.newUser,
+			password: this.newPass,
 		})
 		this.newUser = ''
+		this.newPass = ''
 		this.$router.push('/users')
 	},
 

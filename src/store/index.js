@@ -17,11 +17,11 @@ export default new Vuex.Store({
 		{
 			id:1,
 			name: 'Takuya Tajima',
-			Password: '123456'
+			password: '123456'
 		},{
 			id:2,
 			name: 'Yohei Noda',
-			Password: '123456'
+			password: '123456'
 		}
 		],
 		nextUserId: 3,
@@ -30,11 +30,12 @@ export default new Vuex.Store({
 
 	mutations: {
 		//user registration
-		userRegister (state, { name }){
+		userRegister (state, { name }, { password }){
 			state.userData.push({
 				id: state.nextUserId,
 				name,
-				done: false
+				password,
+				//done: false
 			})
 			state.nextTaskId++
 		},

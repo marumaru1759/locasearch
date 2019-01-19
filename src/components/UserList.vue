@@ -3,10 +3,10 @@
    <div id="user-list">
    	<div class="loading" v-if="loading">Loading....</div>
    	<h1 class="midlang">UserList</h1>
-   	<h2>{{ message }}</h2>
+   	<h2 class="midlang">{{ message }}</h2>
    </div>
    <div v-for="user in users" :key="user.id">
-   	<h2 class="midlang"> Hi {{ user.name }} </h2>
+   	<h2 class="midlang"> Hi {{ user.name }}. Your Password is {{ user.Password }} </h2>
    </div>
 </div>
 </template>

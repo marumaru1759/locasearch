@@ -14,7 +14,7 @@
             <div class="form-group">
               <label for="input_password" class="col-xs-2 control-label midlang">パスワード：</label>
               <div class="col-xs-10">
-                <input type="password" v-model="newPass" class="form-control" id="input_password" placeholder="Password" /></label><br />
+                <input type="text" v-model="newPass" class="form-control" id="input_password" placeholder="Password" /></label><br />
               </div>
             </div>
             

@@ -24,5 +24,29 @@ export default new Vuex.Store({
 			Password: '123456'
 		}
 		],
+		nextUserId: 3,
+
+	},
+
+	mutations: {
+		//user registration
+		userRegister (state, { name }){
+			state.userData.push({
+				id: state.nextUserId
+				name,
+				done: false
+			})
+			state.nextTaskId++
+		},
+
+		toggleRegistrationStatus (state, { id }) {
+			const filtered = state.userData.filter(user => {
+				return user.id === id
+			})
+
+			filtered.forEach(user => {
+				user.done = !user.done
+			})
+		},
 	},
 })

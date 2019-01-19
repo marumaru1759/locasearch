@@ -2,12 +2,12 @@
    <div class="row">
        <div class="col-xs-6 col-xs-offset-3">
           <h1 class="midlang">会員登録</h1>
-          <form action="" method="post" class="form-horizontal">
+          <form v-on:submit.prevent="userRegister" class="form-horizontal">
               
             <div class="form-group">
               <label for="input_name" class="col-xs-2 control-label midlang">名前：</label>
               <div class="col-xs-10">
-                <input type="text" class="form-control" id="login_name" placeholder="Name" /><br />
+                <input type="text" v-model="newUser" class="form-control" id="login_name" placeholder="Name" /><br />
               </div>
             </div>
             
@@ -29,6 +29,36 @@
 </template>
 
 <script>
+export default {
+
+data() {
+	return { newUser: '',}
+	},
+
+computed:{
+	users(){
+		return this.$store.state.userData
+		},
+	},
+
+methods:{
+	userRegister(){
+		// 'userRegister' mutation is committed here
+		this.$store.commit('userRegister',{
+			name: this.newUser,
+		})
+		this.newUser = ''
+	},
+
+	/*toggleRegistrationStatus(user){
+		// 'toggleRegistrationStatus' mutation is committed here
+		this.$store.commit('toggleRegistrationStatus',{
+			id: user.id
+		})
+	}*/
+	}
+}
+
 /*var postUser = function (params, callback){
 	setTimeout(function (){
 		params.id = userData.length + 1

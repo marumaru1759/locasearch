@@ -39,7 +39,7 @@ export default new Vuex.Store({
 			state.nextTaskId++
 		},
 
-		toggleRegistrationStatus (state, { id }) {
+		/*toggleRegistrationStatus (state, { id }) {
 			const filtered = state.userData.filter(user => {
 				return user.id === id
 			})
@@ -47,6 +47,6 @@ export default new Vuex.Store({
 			filtered.forEach(user => {
 				user.done = !user.done
 			})
-		},
+		},*/
 	},
 })

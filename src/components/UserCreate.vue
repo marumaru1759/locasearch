@@ -48,6 +48,7 @@ methods:{
 			name: this.newUser,
 		})
 		this.newUser = ''
+		this.$router.push('/users')
 	},
 
 	/*toggleRegistrationStatus(user){

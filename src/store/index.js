@@ -30,7 +30,7 @@ export default new Vuex.Store({
 
 	mutations: {
 		//user registration
-		userRegister (state, { name }, { password }){
+		userRegister (state, { name }){
 			state.userData.push({
 				id: state.nextUserId,
 				name,

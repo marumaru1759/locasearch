@@ -3,7 +3,6 @@
        <div class="col-xs-6 col-xs-offset-3">
           <h1 class="midlang">会員登録</h1>
           <form v-on:submit.prevent="userRegister" class="form-horizontal">
-              
             <div class="form-group">
               <label for="input_name" class="col-xs-2 control-label midlang">名前：</label>
               <div class="col-xs-10">
@@ -23,7 +22,11 @@
                 <button type="submit" class="btn btn-primary btn-block">登録</button>
               </div>
             </div>
-        　</form>      
+        　</form> 
+
+            <h2>保存と復元</h2>
+            <button type="button" v-on:click="save">Save</button>
+            <button type="button" v-on:click="restore">Restore</button>     
     　 </div>
     </div>
 </template>
@@ -54,6 +57,14 @@ methods:{
 		this.newPass = ''
 		this.$router.push('/users')
 	},
+
+	save(){
+		this.$store.dispatch('save')
+	},
+
+	restore(){
+		this.$store.dispatch('restore')
+	}
 
 	/*toggleRegistrationStatus(user){
 		// 'toggleRegistrationStatus' mutation is committed here

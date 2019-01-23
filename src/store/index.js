@@ -40,6 +40,12 @@ export default new Vuex.Store({
 			state.nextUserd++
 		},
 
+		// restore state
+		restore (state, { userData, nextUserId}){
+			state.userData = userData
+			state.nextUserId = nextUserId
+		}
+
 		/*toggleRegistrationStatus (state, { id }) {
 			const filtered = state.userData.filter(user => {
 				return user.id === id
@@ -50,4 +56,23 @@ export default new Vuex.Store({
 			})
 		},*/
 	},
+
+	actions: {
+		//save "state" in local storage
+		save ({ state }){
+			const data ={
+				userData: state.userData,
+				nextUserId: state.nextUserId
+			}
+			localStorage.setItem('User-app-Data', JSON.stringify(data))
+		},
+
+		//resotore "state" from local storage
+		restore({ commit }){
+			const data = localStorage.getItem('User-app-Data')
+			if(data){
+				commit('restore', JSON.parse(data))
+			}
+		}
+	}
 })

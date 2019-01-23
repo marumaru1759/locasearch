@@ -47,7 +47,7 @@ methods:{
 	userRegister(){
 		// 'userRegister' mutation is committed here
 		this.$store.commit('userRegister',{
-			name: this.newUser},{
+			name: this.newUser
 			password: this.newPass
 		})
 		this.newUser = ''

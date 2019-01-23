@@ -8,6 +8,9 @@
    <div v-for="user in users" :key="user.id">
    	<h2 class="midlang"> Hi {{ user.name }}. Your Password is {{ user.password }} </h2>
    </div>
+		<h2>保存と復元</h2>
+        <button type="button" v-on:click="save">Save</button>
+        <button type="button" v-on:click="restore">Restore</button>    
 </div>
 </template>
 
@@ -23,6 +26,18 @@ computed: {
 data() {
 	return { message: 'hello' }
 },
+
+methods:{
+
+save(){
+		this.$store.dispatch('save')
+	},
+
+	restore(){
+		this.$store.dispatch('restore')
+	}
+}
+
 
 /*const getUsers = function(callback){
 	setTimeoout(function(){

@@ -30,14 +30,14 @@ export default new Vuex.Store({
 
 	mutations: {
 		//user registration
-		userRegister (state, { name }){
+		userRegister (state, { name, password }){
 			state.userData.push({
 				id: state.nextUserId,
 				name,
 				password,
 				//done: false
 			})
-			state.nextTaskId++
+			state.nextUserd++
 		},
 
 		/*toggleRegistrationStatus (state, { id }) {

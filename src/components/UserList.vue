@@ -1,7 +1,6 @@
 <template>
 <div>
    <div id="user-list">
-   	<div class="loading" v-if="loading">Loading....</div>
    	<h1 class="midlang">UserList</h1>
    	<h2 class="midlang">{{ message }}</h2>
    </div>

@@ -24,9 +24,7 @@
             </div>
         　</form> 
 
-            <h2>保存と復元</h2>
-            <button type="button" v-on:click="save">Save</button>
-            <button type="button" v-on:click="restore">Restore</button>     
+             
     　 </div>
     </div>
 </template>
@@ -57,14 +55,6 @@ methods:{
 		this.newPass = ''
 		this.$router.push('/users')
 	},
-
-	save(){
-		this.$store.dispatch('save')
-	},
-
-	restore(){
-		this.$store.dispatch('restore')
-	}
 
 	/*toggleRegistrationStatus(user){
 		// 'toggleRegistrationStatus' mutation is committed here

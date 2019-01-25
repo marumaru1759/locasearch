@@ -3,7 +3,7 @@
   	<div class="form-item">
   		<label for="name">UserName</label>
   		<input
-  			id="name"
+  			id="zettaidaburanname"
   			v-model="name"
   			type="text"
   			autocomplete="off"
@@ -14,7 +14,7 @@
   	<div class="form-item">
   		<label for="password">Password</label>
   		<input
-  			id="password"
+  			id="zettaidaburanpassword"
   			v-model="password"
   			type="password"
   			autocomplete="off"

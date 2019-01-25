@@ -4,7 +4,7 @@
   		<label for="name">Name</label>
   		<input
   			id="zettaidaburanname"
-  			v-model="name"
+  			v-model="username"
   			type="text"
   			autocomplete="off"
   			placholder="your name"
@@ -55,7 +55,7 @@ export default {
 
 	data (){
 		return{
-			name: '',
+			username: '',
 			password: '',
 			progress: false,
 			error: ''
@@ -83,7 +83,7 @@ export default {
 			this.error = ''
 
 			this.$nextTick(() => {
-				this.onlogin({ name: this.name, password: this.password })
+				this.onlogin({ username: this.username, password: this.password })
 				.catch(err => {
 					this.error = err.message
 				})

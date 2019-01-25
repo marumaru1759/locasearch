@@ -17,7 +17,7 @@ export default [{
 	path: '/login',
 	component: Login
 },{
-	path: '/Mypage'
+	path: '/Mypage',
 	component: Mypage,
 	meta: { requiresAuth: true }
 },{

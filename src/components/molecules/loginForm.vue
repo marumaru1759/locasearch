@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import loginButton from '@/component/atoms/loginButton.vue'
+import loginButton from '@/components/atoms/loginButton.vue'
 
 const required = val => !!val.trim()
 

@@ -2,7 +2,17 @@ import * as types from './mutation-types'
 import { Auth, List, Task } from '../api'
 
 export default{
-	userRegister (state, { name, password }){
+	login: ({ commit }, authInfo) => {
+		return Auth.login(authInfo)
+		.then(({ token, userId }) => {
+			commit(types.AUTH_LOGIN, { token, userId })
+		})
+		.catch(err => { throw err })
+	}
+}	
+
+
+	/*userRegister (state, { name, password }){
 			state.userData.push({
 				id: state.nextUserId,
 				name,
@@ -18,13 +28,6 @@ export default{
 			state.nextUserId = nextUserId
 		},
 
-	login: ({ commit }, authInfo) => {
-		return Auth.login(authInfo)
-		.then(({ token, userId }) => {
-			commit(types.AUTH_LOGIN, { token, userId })
-		})
-		.catch(err => { throw err })
-	},
 
 	//save "state" in local storage
 	save ({ state }){
@@ -36,11 +39,10 @@ export default{
 		},
 
 		//resotore "state" from local storage
-	/*restore({ commit }){
+	restore({ commit }){
 			const data = localStorage.getItem('User-app-Data')
 			if(data){
 				commit('restore', JSON.parse(data))
 			}
 		}*/
 		
-	}

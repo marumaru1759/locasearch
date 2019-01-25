@@ -15,7 +15,7 @@ const state = {
 		Lists: []
 	},
 
-	UserData:[{
+	userData:[{
 		id:1,
 		name:"Taro",
 		password:"Pass"

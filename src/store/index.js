@@ -40,25 +40,7 @@ export default new Vuex.Store({
 
 	},
 
-	mutations: {
-		//user registration
-		userRegister (state, { name, password }){
-			state.userData.push({
-				id: state.nextUserId,
-				name,
-				password,
-				//done: false
-			})
-			state.nextUserd++
-		},
-
-		// restore state
-		restore (state, { userData, nextUserId}){
-			state.userData = userData
-			state.nextUserId = nextUserId
-		}
-
-		/*toggleRegistrationStatus (state, { id }) {
+	/*toggleRegistrationStatus (state, { id }) {
 			const filtered = state.userData.filter(user => {
 				return user.id === id
 			})
@@ -67,7 +49,6 @@ export default new Vuex.Store({
 				user.done = !user.done
 			})
 		},*/
-	},
 
 	actions: {
 		//save "state" in local storage

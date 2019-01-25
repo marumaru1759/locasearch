@@ -85,6 +85,13 @@ export default new Vuex.Store({
 			if(data){
 				commit('restore', JSON.parse(data))
 			}
-		}
+		},
+		login: ({ commit }, authInfo) => {
+			return Auth.login(authInfo)
+			.then(({ token, userId }) => {
+			commit(types.AUTH_LOGIN, { token, userId })
+			})
+			.catch(err => { throw err })
+		},
 	}
 })

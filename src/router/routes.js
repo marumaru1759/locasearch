@@ -1,7 +1,7 @@
 import CustomeWel from '@/components/CustomeWel'
 import UserCreate from '@/components/UserCreate'
 import UserList from '@/components/UserList'
-import Login from '@/components/Login'
+import LoginView from '@/components/LoginView'
 import Mypage from '@/components/MyPage'
 
 
@@ -16,7 +16,7 @@ export default [{
 	component: UserList
 },{
 	path: '/login',
-	component: Login
+	component: LoginView
 },{
 	path: '/Mypage',
 	component: Mypage,

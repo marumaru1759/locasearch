@@ -15,11 +15,16 @@ const state = {
 		Lists: []
 	},
 
-	UserData:{
+	UserData:[{
 		id:1,
 		name:"Taro",
 		password:"Pass"
-	},
+	},{
+		id:2,
+		name: 'Yohei Noda',
+		password: '123456'
+	}
+	],
 
 	nextuserId:3
 }

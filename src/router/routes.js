@@ -13,6 +13,9 @@ export default [{
 	path: '/users',
 	component: UserList
 },{
+	path: '/login',
+	component: Login
+},{
 	path: '*',
 	redirect: '/'
 }]

@@ -7,7 +7,7 @@ import mutations from './mutations'
 Vue.use(Vuex)
 
 const state = {
-	auth:{
+	auth: {
 		token: null,
 		userId: null
 	},
@@ -24,7 +24,22 @@ export default new Vuex.Store({
 	mutations,
 	strict: process.env.NODE_ENV !== 'production',
 
-	state: {
+})	
+
+	/*toggleRegistrationStatus (state, { id }) {
+			const filtered = state.userData.filter(user => {
+				return user.id === id
+			})
+
+			filtered.forEach(user => {
+				user.done = !user.done
+			})
+		},*/
+
+	
+
+
+/*state: {
 		userData: [
 		{
 			id:1,
@@ -38,35 +53,4 @@ export default new Vuex.Store({
 		],
 		nextUserId: 3,
 
-	},
-
-	/*toggleRegistrationStatus (state, { id }) {
-			const filtered = state.userData.filter(user => {
-				return user.id === id
-			})
-
-			filtered.forEach(user => {
-				user.done = !user.done
-			})
-		},*/
-
-	actions: {
-		//save "state" in local storage
-		save ({ state }){
-			const data ={
-				userData: state.userData,
-				nextUserId: state.nextUserId
-			}
-			localStorage.setItem('User-app-Data', JSON.stringify(data))
-		},
-
-		//resotore "state" from local storage
-		restore({ commit }){
-			const data = localStorage.getItem('User-app-Data')
-			if(data){
-				commit('restore', JSON.parse(data))
-			}
-		}
-		
-	}
-})
+	},*/

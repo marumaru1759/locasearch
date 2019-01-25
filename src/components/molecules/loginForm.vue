@@ -1,7 +1,7 @@
 <template>
   <form novalidate>
   	<div class="form-item">
-  		<label for="name">UserName</label>
+  		<label for="name">Name</label>
   		<input
   			id="zettaidaburanname"
   			v-model="name"

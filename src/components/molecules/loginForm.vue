@@ -33,7 +33,6 @@
   </form>
 </template>
 
-</template>
 
 <script>
 import loginButton from '@/components/atoms/loginButton.vue'

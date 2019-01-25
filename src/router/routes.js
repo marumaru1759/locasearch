@@ -1,6 +1,7 @@
 import CustomeWel from '@/components/CustomeWel'
 import UserCreate from '@/components/UserCreate'
 import UserList from '@/components/UserList'
+import Mypage from '@/components/MyPage'
 
 
 export default [{
@@ -15,6 +16,10 @@ export default [{
 },{
 	path: '/login',
 	component: Login
+},{
+	path: '/Mypage'
+	component: Mypage,
+	meta: { requiresAuth: true }
 },{
 	path: '*',
 	redirect: '/'

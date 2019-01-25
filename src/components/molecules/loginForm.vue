@@ -1,5 +1,5 @@
 <template>
-  <form novalidate=>
+  <form novalidate>
   	<div class="form-item">
   		<label for="name">UserName</label>
   		<input
@@ -43,7 +43,9 @@ const required = val => !!val.trim()
 export default {
 	name: 'loginForm',
 
-	components: loginButton
+	components: {
+		loginButton
+	},
 
 	props: {
 		onlogin:{

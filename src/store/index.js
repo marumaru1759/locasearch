@@ -13,7 +13,15 @@ const state = {
 	},
 	board:{
 		Lists: []
-	}
+	},
+
+	UserData:{
+		id:1,
+		name:"Taro",
+		password:"Pass"
+	},
+
+	userId = 3
 }
 
 

@@ -12,18 +12,10 @@ export default{
 }	
 
 
-	/*userRegister (state, { name, password }){
-			state.userData.push({
-				id: state.nextUserId,
-				name,
-				password,
-				//done: false
-			})
-			state.nextUserd++
-		},
+
 
 		// restore state
-	restore (state, { userData, nextUserId}){
+/*	restore (state, { userData, nextUserId}){
 			state.userData = userData
 			state.nextUserId = nextUserId
 		},

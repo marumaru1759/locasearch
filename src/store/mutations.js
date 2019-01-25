@@ -12,7 +12,7 @@ export default {
 				password,
 				//done: false
 			})
-			state.nextUserd++
+			state.nextUserId++
 		},
 }
 

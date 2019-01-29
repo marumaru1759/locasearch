@@ -1,5 +1,7 @@
 import * as types from './mutation-types'
-import * as firebase from 'firebase';
+import firebase from 'firebase/app';
+
+import 'firebase/auth';
 
 const config = {
 	apiKey: "AIzaSyBTtRuNAeLj9RdkYz5XpsC7u579QqLAmpg",

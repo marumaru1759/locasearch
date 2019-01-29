@@ -7,10 +7,12 @@ export default {
 	},
 
 	userRegister (state, { email, password }){
+		console.log(type of fb.firebaseapp.auth())
 		fb.firebaseapp.auth().createUserwithEmailAndPassword(email, password).catch(function(error) {
   			// Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
+  console.log(type of fb.firebaseapp.auth())
   // ...
 });
 	}

@@ -4,9 +4,9 @@
           <h1 class="midlang">会員登録</h1>
           <form v-on:submit.prevent="userRegister" class="form-horizontal">
             <div class="form-group">
-              <label for="input_name" class="col-xs-2 control-label midlang">名前：</label>
+              <label for="input_name" class="col-xs-2 control-label midlang">E-mail：</label>
               <div class="col-xs-10">
-                <input type="text" v-model="newUser" class="form-control" id="login_name" placeholder="Name" /><br />
+                <input type="text" v-model="newemail" class="form-control" id="login_name" placeholder="Name" /><br />
               </div>
             </div>
             
@@ -33,7 +33,7 @@
 export default {
 
 data() {
-	return { newUser: '',
+	return { newemail: '',
 			 newPass: ''
 			}
 	},
@@ -48,7 +48,7 @@ methods:{
 	userRegister(){
 		// 'userRegister' mutation is committed here
 		this.$store.commit('userRegister',{
-			name: this.newUser,
+			email: this.newemail,
 			password: this.newPass
 		})
 		this.newUser = ''

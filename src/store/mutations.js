@@ -10,15 +10,13 @@ const config = {
     messagingSenderId: "660314635299"
 };
 
-const firebase = firebase.initializeApp(config);
-
-
 export default {
 	[types.AUTH_LOGIN] (state, payload) {
 		state.auth = payload
 	},
 
 	userRegister (state, { email, password }){
+		firebase.initializeApp(config);
 		firebase.auth().createUserwithEmailAndPassword(email, password).catch(function(error) {
   			// Handle Errors here.
   var errorCode = error.code;

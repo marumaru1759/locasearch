@@ -15,7 +15,10 @@ const state = {
 		Lists: []
 	},
 
-	currentUser:[]
+	currentUser:{
+		uid: null,
+		email: null
+	}
 }
 
 

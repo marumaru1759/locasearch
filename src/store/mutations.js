@@ -12,7 +12,9 @@ export default {
   var errorCode = error.code;
   var errorMessage = error.message;
   // ...
-}).then(function(){ state.currentUser =  fb.firebaseapp.auth().currentUser; })		
+}).then(function(){ state.currentUser.uid =  fb.firebaseapp.auth().currentUser.uid; 
+					state.currentUser.email = fb.firebaseapp.auth().currentUser.email
+})		
 	} 
 
 }

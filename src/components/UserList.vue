@@ -11,6 +11,10 @@
 <script>
 export default {
 
+data:{
+	{ message: "hello" }
+},
+
 computed:{
 		user(){
 			return this.$store.state.currentUser	

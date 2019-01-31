@@ -15,18 +15,12 @@ const state = {
 		Lists: []
 	},
 
-	userData:[{
-		id:1,
-		name:"Taro",
-		password:"Pass"
-	},{
-		id:2,
-		name: 'Yohei Noda',
-		password: '123456'
+	currentUser:{
+		email,
+		uid,
+		password
 	}
-	],
-
-	nextuserId:3
+	
 }
 
 
@@ -52,18 +46,3 @@ export default new Vuex.Store({
 	
 
 
-/*state: {
-		userData: [
-		{
-			id:1,
-			name: 'Takuya Tajima',
-			password: '123456'
-		},{
-			id:2,
-			name: 'Yohei Noda',
-			password: '123456'
-		}
-		],
-		nextUserId: 3,
-
-	},*/

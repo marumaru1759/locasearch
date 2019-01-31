@@ -12,9 +12,8 @@ export default {
   var errorCode = error.code;
   var errorMessage = error.message;
   // ...
-});
-		state.currentUser =  fb.firebaseapp.auth().currentUser;
-	},
+}).then(function(){ state.currentUser =  fb.firebaseapp.auth().currentUser; })		
+	} 
 
 }
 

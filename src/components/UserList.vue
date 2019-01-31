@@ -11,8 +11,8 @@
 <script>
 export default {
 
-data:{
-	{ message: "hello" }
+data: function(){
+	return { message: "hello" }
 },
 
 computed:{

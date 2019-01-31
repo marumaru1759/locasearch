@@ -15,7 +15,7 @@ const state = {
 		Lists: []
 	},
 
-	currentUser:{}
+	currentUser:[]
 }
 
 

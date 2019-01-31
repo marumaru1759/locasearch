@@ -4,7 +4,7 @@
    	<h1 class="midlang">UserList</h1>
    	<h2 class="midlang">{{ message }}</h2>
    </div>
-   <h2 class="midlang"> Hi {{ user.email }}. Your Password is {{ user.password }} </h2>
+   <h2 class="midlang"> {{ user.uid }} Hi {{ user.email }}. Your Password is {{ user.password }} </h2>
 </div>
 </template>
 

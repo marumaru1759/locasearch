@@ -16,8 +16,8 @@ const state = {
 	},
 
 	currentUser:{
-		uid: null,
-		email: null
+		uid: '',
+		email: ''
 	}
 }
 

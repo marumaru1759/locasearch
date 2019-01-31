@@ -2,7 +2,6 @@
 <div>
    <div id="user-list">
    	<h1 class="midlang">UserList</h1>
-   	<h2 class="midlang">{{ message }}</h2>
    </div>
    <h2 class="midlang"> {{ user.uid }} Hi {{ user.email }}</h2>
 </div>
@@ -10,10 +9,6 @@
 
 <script>
 export default {
-
-data: function(){
-	return { message: "hello" }
-},
 
 computed:{
 		user(){

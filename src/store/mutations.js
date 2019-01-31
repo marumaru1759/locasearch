@@ -13,7 +13,7 @@ export default {
   var errorMessage = error.message;
   // ...
 });
-	}
+	};
 
 	getCurrentUser(){
 		return fb.firebaseapp.auth().currentUser;

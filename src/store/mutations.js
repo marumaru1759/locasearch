@@ -13,11 +13,8 @@ export default {
   var errorMessage = error.message;
   // ...
 });
+		state.currentUser =  fb.firebaseapp.auth().currentUser;
 	},
-
-	getCurrentUser(state){
-		state.curretUser = fb.firebaseapp.auth().currentUser;
-	}
 
 }
 

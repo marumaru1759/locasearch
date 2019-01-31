@@ -38,12 +38,6 @@ data() {
 			}
 	},
 
-computed:{
-	users(){
-		return this.$store.state.userData
-		},
-	},
-
 methods:{
 	userRegister(){
 		// 'userRegister' mutation is committed here
@@ -54,6 +48,8 @@ methods:{
 		this.newUser = ''
 		this.newPass = ''
 		this.$router.push('/users')
+
+
 	},
 
 	/*toggleRegistrationStatus(user){

@@ -19,7 +19,7 @@ methods:{
 	handleLogin(authInfo){
 		return this.$store.dispatch('login', authInfo)
 			.then(() => {
-				this.$router.push({ path: '/'})
+				this.$router.push({ path: '/Mypage'})
 			})
 			.catch(err => this.throwReject(err))
 	},

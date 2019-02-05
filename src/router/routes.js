@@ -2,7 +2,7 @@ import CustomeWel from '@/components/CustomeWel'
 import UserCreate from '@/components/UserCreate'
 import UserList from '@/components/UserList'
 import LoginView from '@/components/LoginView'
-import Mypage from '@/components/MyPage'
+import MyPage from '@/components/MyPage'
 
 
 export default [{
@@ -19,7 +19,7 @@ export default [{
 	component: LoginView
 },{
 	path: '/Mypage',
-	component: Mypage,
+	component: MyPage,
 	meta: { requiresAuth: true }
 },{
 	path: '*',

@@ -1,36 +1,48 @@
 <template>
-  <form novalidate>
-  	<div class="form-item">
-  		<label for="name">Name</label>
-  		<input
-  			id="zettaidaburanname"
-  			v-model="username"
-  			type="text"
-  			autocomplete="off"
-  			placholder="your name"
-  			@focus="resetError"
-  		>
-  	</div>
-  	<div class="form-item">
-  		<label for="password">Password</label>
-  		<input
-  			id="zettaidaburanpassword"
-  			v-model="password"
-  			type="password"
-  			autocomplete="off"
-  			placeholder="your password"
-  			@focus="resetError">
-  		<ul>
-  			<li v-if="!validation.password.required">Password is mandatory</li>
-  		</ul>
-  	</div>
+  
+  	<div class="row">
+  		<div class="col-xs-6 col-xs-offset-3">
+  			<h1 class="midlang">ログイン</h1>
+  			<form novalidate　class="form-horizontal">
+  				<div class="form-group" >
+  					<label for="email" class="col-xs-2 control-label midlang">E-mail</label>
+  					<div class="col-xs-10">
+  						<input
+  							id="input_password"
+  							v-model="email"
+  							type="text"
+  							autocomplete="off"
+  							placholder="your name"
+  							@focus="resetError"
+  							class = "form-control"
+  						><br />
+  					</div>
+  				</div>
 
-  	<div class="form-actions">
-  		<loginButton
-  			@click="handleClick">Login
-  		</loginButton>
-  	</div>
-  </form>
+  				<div class="form-group">
+  					<label for="password" class="col-xs-2 control-label midlang">Password</label>
+  					<div class="col-xs-10">
+						<input
+  							id="password"
+  							v-model="password"
+  							type="password"
+  							autocomplete="off"
+  							placeholder="your password"
+  							@focus="resetError">
+  					<ul>
+  						<li v-if="!validation.password.required">Password is mandatory</li>
+  					</ul>
+  					</div>
+              </div>                
+              
+  			<div class="form-group">
+  				<loginButton
+  					@click="handleClick">Login
+  				</loginButton>
+  			</div>
+  			</form>
+		</div>
+	</div>
 </template>
 
 
@@ -55,7 +67,7 @@ export default {
 
 	data (){
 		return{
-			username: '',
+			email: '',
 			password: '',
 			progress: false,
 			error: ''

@@ -11,7 +11,7 @@
   							placholder="your name"
   							@focus="resetError"
   							class = "form-control"
-  						><br />
+  						>
   					</div>
   				</div>
 
@@ -24,7 +24,9 @@
   							type="password"
   							autocomplete="off"
   							placeholder="your password"
-  							@focus="resetError">
+  							@focus="resetError"
+  							class = "form-control"
+  							>
   					<ul>
   						<li v-if="!validation.password.required">Password is mandatory</li>
   					</ul>

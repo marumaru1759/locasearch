@@ -2,8 +2,8 @@ import * as fb from './firebase'
 
 
 export default {
-	login(authInfo){
-		fb.firebaseapp.auth().signInWithEmailAndPassword(authInfo).catch(function(error){
+	login(email, password){
+		fb.firebaseapp.auth().signInWithEmailAndPassword(email, password).catch(function(error){
 		var errorCode = error.code;
 		var errorMessage = error.Message;
 	}).then(function(){

@@ -2,7 +2,8 @@ import * as fb from './firebase'
 
 
 export default {
-	login: fb.firebaseapp.auth().signInWithEmailAndPassword(email, password).catch(function(error){
+	login(authInfo){
+		fb.firebaseapp.auth().signInWithEmailAndPassword(authInfo).catch(function(error){
 		var errorCode = error.code;
 		var errorMessage = error.Message;
 	}).then(function(){
@@ -12,4 +13,5 @@ export default {
 				console.log(state.currentUser.email);
 	})
 		
+}
 }

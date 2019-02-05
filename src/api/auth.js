@@ -1,14 +1,15 @@
-import client from './client'
+import * as fb from './firebase'
+
 
 export default {
-	login: authInfo => {
-		return new Promise((resolve, reject) => {
-			client.post('/auth/login', authInfo)
-			.then(res => resolve({ token: res.data.token, userId: res.data.userId
-			}))
-			.catch(err => {
-				reject(new Error(err.response.data.message || err.message))
-			})
-		})
-	}
+	login: fb.firebaseapp.auth().signInWithEmailAndPasswor(authInfo).catch(function(error){
+		var errorCode = error.code;
+		var errorMessage = error.Message;
+	}).then(function(){
+				state.currentUser.uid =  fb.firebaseapp.auth().currentUser.uid; 
+				console.log(state.currentUser.uid);
+				state.currentUser.email = fb.firebaseapp.auth().currentUser.email;
+				console.log(state.currentUser.email);
+	})
+		
 }

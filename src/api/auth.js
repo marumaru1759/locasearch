@@ -18,9 +18,8 @@ export default {
 					} else{
 						//nothing happens
 					}
-				}
-				
-	})
+				})
 		
+		})
 	}
 }

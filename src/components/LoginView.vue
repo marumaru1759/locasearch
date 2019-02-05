@@ -1,8 +1,10 @@
 <template>
-   <div>
+	<div class="row">
+   		<div class="col-xs-6 col-xs-offset-3">
    	<h1>Login</h1>
    	<loginForm :onlogin="handleLogin" />
-   </div>
+   		</div>
+   	</div>
 </template>
 
 <script>

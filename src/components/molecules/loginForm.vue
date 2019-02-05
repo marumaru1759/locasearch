@@ -1,14 +1,10 @@
 <template>
-  
-  	<div class="row">
-  		<div class="col-xs-6 col-xs-offset-3">
-  			<h1 class="midlang">ログイン</h1>
-  			<form novalidate　class="form-horizontal">
+  	<form novalidate　class="form-horizontal">
   				<div class="form-group" >
   					<label for="email" class="col-xs-2 control-label midlang">E-mail</label>
   					<div class="col-xs-10">
   						<input
-  							id="input_password"
+  							id="login_name"
   							v-model="email"
   							type="text"
   							autocomplete="off"
@@ -23,7 +19,7 @@
   					<label for="password" class="col-xs-2 control-label midlang">Password</label>
   					<div class="col-xs-10">
 						<input
-  							id="password"
+  							id="input_password"
   							v-model="password"
   							type="password"
   							autocomplete="off"
@@ -40,9 +36,7 @@
   					@click="handleClick">Login
   				</loginButton>
   			</div>
-  			</form>
-		</div>
-	</div>
+  	</form>
 </template>
 
 

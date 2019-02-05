@@ -18,8 +18,8 @@ export default {
 	},
 
 methods:{
-	handleLogin(email, password){
-		return this.$store.dispatch('login', { email, password })
+	handleLogin(authInfo){
+		return this.$store.dispatch('login', authInfo)
 			.then(() => {
 				this.$router.push({ path: '/Mypage'})
 			})

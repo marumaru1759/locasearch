@@ -9,7 +9,7 @@ export default {
 		var errorMessage = error.Message;
 		console.log(errorMessage);
 	}).then(function(){
-				fb.firebaseapp.auth().onAuthStateChanged(function(user)){
+				fb.firebaseapp.auth().onAuthStateChanged(function(user){
 					if(user){
 						state.currentUser.uid =  fb.firebaseapp.auth().currentUser.uid; 
 						console.log(state.currentUser.uid);

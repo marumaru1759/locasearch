@@ -4,7 +4,7 @@
   					<label for="email" class="col-xs-2 control-label midlang">E-mail</label>
   					<div class="col-xs-10">
   						<input
-  							id="login_name"
+  							id="email"
   							v-model="email"
   							type="text"
   							autocomplete="off"
@@ -19,7 +19,7 @@
   					<label for="password" class="col-xs-2 control-label midlang">Password</label>
   					<div class="col-xs-10">
 						<input
-  							id="input_password"
+  							id="password"
   							v-model="password"
   							type="password"
   							autocomplete="off"

@@ -8,7 +8,7 @@
   							v-model="email"
   							type="text"
   							autocomplete="off"
-  							placholder="your name"
+  							placholder="your email"
   							@focus="resetError"
   							class = "form-control"
   						>
@@ -26,9 +26,9 @@
   							placeholder="your password"
   							@focus="resetError"
   							class = "form-control"
-  							>
+  						>
   					<ul>
-  						<li v-if="!validation.password.required">Password is mandatory</li>
+  						<li class ="midlang" v-if="!validation.password.required">Password is mandatory</li>
   					</ul>
   					</div>
               </div>                
@@ -91,7 +91,7 @@ export default {
 			this.error = ''
 
 			this.$nextTick(() => {
-				this.onlogin({ username: this.username, password: this.password })
+				this.onlogin({ email: this.email, password: this.password })
 				.catch(err => {
 					this.error = err.message
 				})

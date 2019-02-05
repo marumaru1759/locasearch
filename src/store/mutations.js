@@ -1,5 +1,5 @@
 import * as types from './mutation-types'
-import * as fb from './firebase'
+import * as fb from '../api/firebase'
 
 export default {
 	[types.AUTH_LOGIN] (state, payload) {

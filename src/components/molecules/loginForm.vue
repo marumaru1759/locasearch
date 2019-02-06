@@ -8,7 +8,7 @@
   							v-model="email"
   							type="text"
   							autocomplete="off"
-  							placholder="your email"
+  							placeholder="your email"
   							@focus="resetError"
   							class = "form-control"
   						>

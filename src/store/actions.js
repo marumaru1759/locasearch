@@ -3,10 +3,11 @@ import { Auth, List, Task } from '../api'
 
 export default{
 	login({ commit }, authInfo ) {
+		console.log(authInfo.email);
 		return Auth.login(authInfo)
 		.then(({ uid, email }) => { 
 			commit(types.AUTH_LOGIN, { uid, email} )
-			console.log("success");
+			console.log("success2");
 		})
 		.catch(err => { throw err })
 	}

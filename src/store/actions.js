@@ -6,7 +6,7 @@ export default{
 		Auth.login(authInfo)
 		.then(function onFulfilled({ uid, email }){
 			console.log("success");
-			commit(types.AUTH_LOGTIN, { uid, email })
+			commit(types.AUTH_LOGIN, { uid, email })
 		})
 		.catch(err => { throw err })
 	}

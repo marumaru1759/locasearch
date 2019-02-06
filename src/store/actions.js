@@ -5,7 +5,8 @@ export default{
 	login({ commit }, authInfo ) {
 		Auth.login(authInfo)
 		.then(function onFulfilled({ uid, email }){
-			console.log("success");
+			console.log(uid);
+			console.log(email);
 			commit(types.AUTH_LOGIN, { uid, email })
 		})
 		.catch(err => { throw err })

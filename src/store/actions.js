@@ -5,7 +5,8 @@ export default{
 	login({ commit }, authInfo ) {
 		return Auth.login(authInfo)
 		.then(({ uid, email}) => { 
-			commit(types.AUTH_LOGIN, { uid, email})
+			commit(types.AUTH_LOGIN, { uid, email} )
+			alert(success);
 		})
 		.catch(err => { throw err })
 	}

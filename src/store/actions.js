@@ -4,9 +4,9 @@ import { Auth, List, Task } from '../api'
 export default{
 	login({ commit }, authInfo ) {
 		return Auth.login(authInfo)
-		.then(({ uid, email}) => { 
+		.then(({ uid, email }) => { 
 			commit(types.AUTH_LOGIN, { uid, email} )
-			alert(success);
+			console.log("success");
 		})
 		.catch(err => { throw err })
 	}

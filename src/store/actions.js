@@ -3,12 +3,9 @@ import { Auth, List, Task } from '../api'
 
 export default{
 	login({ commit }, authInfo ) {
-		Auth.login(authInfo)
-		.then(function(){
-			state.currentUser.uid =  fb.firebaseapp.auth().currentUser.uid; 
-			console.log(state.currentUser.uid);
-			state.currentUser.email = fb.firebaseapp.auth().currentUser.email;
-			console.log(state.currentUser.email);
+		return Auth.login(authInfo)
+		.then(({ uid, email}) => { 
+			commit(types.AUTH_LOGIN, { uid, email})
 		})
 		.catch(err => { throw err })
 	}

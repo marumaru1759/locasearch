@@ -7,8 +7,8 @@ export default {
 		console.log(authInfo.password);
 		fb.firebaseapp.auth().signInWithEmailAndPassword(authInfo.email, authInfo.password);
 	})
-	}
 }
+
 
 
 

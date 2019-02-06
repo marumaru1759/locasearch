@@ -2,8 +2,8 @@ import * as types from './mutation-types'
 import { Auth, List, Task } from '../api'
 
 export default{
-	login: ({ commit }, authInfo ) => {
-		return Auth.login(authInfo)
+	login({ commit }, authInfo ) {
+		Auth.login(authInfo)
 		.then(function(){
 			state.currentUser.uid =  fb.firebaseapp.auth().currentUser.uid; 
 			console.log(state.currentUser.uid);

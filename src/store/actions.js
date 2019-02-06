@@ -3,7 +3,7 @@ import { Auth, List, Task } from '../api'
 
 export default{
 	login: ({ commit }, authInfo ) => {
-		Auth.login(authInfo)
+		return Auth.login(authInfo)
 		.then(function(){
 			state.currentUser.uid =  fb.firebaseapp.auth().currentUser.uid; 
 			console.log(state.currentUser.uid);

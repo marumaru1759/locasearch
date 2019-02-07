@@ -9,7 +9,7 @@ export default{
 			console.log(email);
 			commit(types.AUTH_LOGIN, { uid, email })
 		})
-		.catch(err => { throw err })
+		.catch(err => { console.log("error") })
 	}
 }	
 

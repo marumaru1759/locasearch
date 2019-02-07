@@ -21,13 +21,8 @@ export default {
 	login: authInfo => {
 		return new Promise(function (resolve, reject){
 			fb.firebaseapp.auth().signInWithEmailAndPassword(authInfo.email, authInfo.password);
-			if (user){
-				resolve({ uid: fb.firebaseapp.auth().currentUser.uid,  email: fb.firebaseapp.auth().currentUser.email});
-			} else{
-				reject( console.log("failed") )		
-			}
-			
-		})
+			resolve({ uid: fb.firebaseapp.auth().currentUser.uid,  email: fb.firebaseapp.auth().currentUser.email}) 
+			})
 	}
 }
 

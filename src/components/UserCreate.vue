@@ -3,17 +3,18 @@
        <div class="col-xs-6 col-xs-offset-3">
           <h1 class="midlang">会員登録</h1>
           <form v-on:submit.prevent="userRegister" class="form-horizontal">
-            <div class="form-group">
-              <label for="input_name" class="col-xs-2 control-label midlang">E-mail：</label>
+          	
+          	<div class="form-group">
+              <label for="input_email" class="col-xs-2 control-label midlang">E-mail：</label>
               <div class="col-xs-10">
-                <input type="text" v-model="newemail" class="form-control" id="login_name" placeholder="Name" /><br />
+                <input type="text" v-model="newemail" class="form-control" id="input_email" placeholder="your email" /><br />
               </div>
             </div>
             
             <div class="form-group">
               <label for="input_password" class="col-xs-2 control-label midlang">パスワード：</label>
               <div class="col-xs-10">
-                <input type="password" v-model="newPass" class="form-control" id="input_password" placeholder="Password" /></label><br />
+                <input type="password" v-model="newPass" class="form-control" id="input_password" placeholder="your password" /></label><br />
               </div>
             </div>
             
@@ -33,7 +34,8 @@
 export default {
 
 data() {
-	return { newemail: '',
+	return { 
+			 newemail: '',
 			 newPass: ''
 			}
 	},
@@ -45,9 +47,9 @@ methods:{
 			email: this.newemail,
 			password: this.newPass
 		})
-		this.newUser = ''
+		this.newemail = ''
 		this.newPass = ''
-		this.$router.push('/users')
+		this.$router.push('/Mypage')
 
 
 	},

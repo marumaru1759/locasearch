@@ -3,7 +3,7 @@ import * as fb from '../api/firebase'
 
 export default {
 	[types.AUTH_LOGIN] (state, payload) {
-		state.auth = payload
+		state.currentUser= payload
 	},
 
 	userRegister(state, { email, password }){

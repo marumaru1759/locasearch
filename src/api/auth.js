@@ -27,9 +27,10 @@ export default {
 			fb.firebaseapp.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
   			// Handle Errors here.
   				console.log("alert");
-  			});
-			resolve({ uid: fb.firebaseapp.auth().currentUser.uid,  email: fb.firebaseapp.auth().currentUser.email}) 
-			})
+  			}).then(function(){
+  				resolve({ uid: fb.firebaseapp.auth().currentUser.uid,  email: fb.firebaseapp.auth().currentUser.email})	
+  			})
+		})
 	}
 
 }

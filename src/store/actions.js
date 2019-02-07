@@ -15,7 +15,7 @@ export default{
 	},
 
 	logout({ commit }){
-		Auth.logout
+		Auth.logout()
         .then(function onFulfilled({ uid, email }){
         	commit(types.AUTH_LOGOUT, { uid, email })
         })

@@ -24,7 +24,7 @@ export default {
 			if (user){
 				resolve({ uid: fb.firebaseapp.auth().currentUser.uid,  email: fb.firebaseapp.auth().currentUser.email});
 			} else{
-				reject( console.log("failed"); )		
+				reject( console.log("failed") )		
 			}
 			
 		})

@@ -27,6 +27,8 @@ export default{
 	userRegister({ commit }, { email, password }){
 		Auth.userRegister(email, password)
 		.then(function onFulfilled({ uid, email }){
+			console.log(uid);
+			console.log(email);
 			commit(types.AUTH_LOGIN, { uid, email })
 		})
 		.catch(function onRejected(error){

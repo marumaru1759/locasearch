@@ -1,9 +1,17 @@
 <template>
 <div>
+	<header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Hi {{ user.email }}</h3>
+          <nav class="nav nav-masthead justify-content-end">
+            <router-link to="/info" class="nav-link">お知らせ</router-link>
+            <router-link to="/logout" class="nav-link">Logout</router-link>
+          </nav>
+        </div>
+    </header>
    <div id="user-list">
-   	<h1 class="midlang">UserList</h1>
+   	<h3 class="midlang">{{ user.uid }}</h3>
    </div>
-   <h2 class="midlang"> {{ user.uid }} Hi {{ user.email }}</h2>
 </div>
 </template>
 

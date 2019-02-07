@@ -27,7 +27,7 @@ export default {
 			})
 	},
 	
-	logout: => {
+	logout: () => {
 		return new Promise(function(resolve, reject){
 			fb.firebaseapp.auth().signOut().catch(function(error){
 				console.log("alert");

@@ -12,6 +12,16 @@ export default{
 		.catch(function onRejected(error){
 		 console.log("error");
 		})
+	},
+
+	logout({ commit }){
+		Auth.logout
+        .then(function onFulfilled({ uid, email }){
+        	commit(types.AUTH_LOGIN, { uid, email })
+        })
+        .catch(function onRejected(error){
+        	console.log("error");
+        })
 	}
 }	
 

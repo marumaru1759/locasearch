@@ -26,13 +26,6 @@ computed:{
 
 methods:{
 
-save(){
-		this.$store.dispatch('save')
-	},
-
-restore(){
-		this.$store.dispatch('restore')
-	}
 }
 
 }

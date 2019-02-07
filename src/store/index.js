@@ -16,7 +16,6 @@ const state = {
 	},
 
 	currentUser:{
-		nickname: '',
 		uid: '',
 		email: ''
 	}

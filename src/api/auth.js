@@ -22,6 +22,8 @@ export default {
 
 	userRegister: ( email, password ) => {
 		return new Promise(function(resolve, reject){
+			console.log(email);
+			console.log(password);
 			fb.firebaseapp.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
   			// Handle Errors here.
   				console.log("alert");

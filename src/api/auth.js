@@ -6,9 +6,10 @@ export default {
 		return new Promise(function (resolve, reject){
 			fb.firebaseapp.auth().signInWithEmailAndPassword(authInfo.email, authInfo.password).catch(function(error){
 				console.log("alert");
-			});
-			resolve({ uid: fb.firebaseapp.auth().currentUser.uid,  email: fb.firebaseapp.auth().currentUser.email}) 
+			}).then(function(){
+				resolve({ uid: fb.firebaseapp.auth().currentUser.uid,  email: fb.firebaseapp.auth().currentUser.email})	
 			})
+		})
 	},
 	
 	logout: () => {

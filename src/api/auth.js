@@ -25,6 +25,15 @@ export default {
 			});
 			resolve({ uid: fb.firebaseapp.auth().currentUser.uid,  email: fb.firebaseapp.auth().currentUser.email}) 
 			})
+	},
+	
+	logout: => {
+		return new Promise(function(resolve, reject){
+			fb.firebaseapp.auth().signOut().catch(function(error){
+				console.log("alert");
+			});
+			resolve({ uid: null, email: null })
+		})
 	}
 }
 

@@ -22,6 +22,12 @@ export default [{
 	component: MyPage,
 	//meta: { requiresAuth: true }
 },{
+	path: '/logout',
+	beforeEnter: function(to, from, next){
+		this.$store.dispatch('logout')
+		next('/')
+	}
+},{
 	path: '*',
 	redirect: '/'
 }]

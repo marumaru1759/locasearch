@@ -5,6 +5,9 @@ export default {
 	[types.AUTH_LOGIN] (state, payload) {
 		state.currentUser= payload
 	},
+	[types.AUTH_LOGOUT](state, payload){
+		state.currentUser = payload
+	},
 
 	userRegister(state, { email, password }){
 		fb.firebaseapp.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {

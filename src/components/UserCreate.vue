@@ -43,7 +43,7 @@ data() {
 methods:{
 	userRegister(){
 		// 'userRegister' mutation is committed here
-		this.$store.commit('userRegister',{
+		this.$store.dispatch('userRegister',{
 			email: this.newemail,
 			password: this.newPass
 		})

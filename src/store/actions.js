@@ -17,11 +17,21 @@ export default{
 	logout({ commit }){
 		Auth.logout
         .then(function onFulfilled({ uid, email }){
-        	commit(types.AUTH_LOGIN, { uid, email })
+        	commit(types.AUTH_LOGOUT, { uid, email })
         })
         .catch(function onRejected(error){
         	console.log("error");
         })
+	},
+
+	userRegister({ commit }, { email, password }){
+		Auth.userRegister(email, password)
+		.then(function onFulfilled({ uid, email }){
+			commit(types.AUTH_LOGIN, { uid, email })
+		})
+		.catch(function onRejected(error){
+			console.log("error");
+		})		
 	}
 }	
 

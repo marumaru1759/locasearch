@@ -5,7 +5,7 @@
           <h3 class="masthead-brand">Hi {{ user.email }}</h3>
           <nav class="nav nav-masthead justify-content-end">
             <router-link to="/info" class="nav-link">お知らせ</router-link>
-            <router-link to="/logout" class="nav-link">Logout</router-link>
+            <a href="#" @click="logoutclick" class="nav-link">Logout</router-link>
           </nav>
         </div>
     </header>
@@ -25,9 +25,14 @@ computed:{
 },
 
 methods:{
-
-}
-
+	logoutclick(){
+		return this.$store.dispatch('logout')
+			.then(() => {
+				this.$router.push({ path: '/'})
+			})
+			.catch(err => this.throwReject(err))
+		}
+	}
 }
 </script>
 

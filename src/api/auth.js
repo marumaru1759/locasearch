@@ -16,8 +16,9 @@ export default {
 		return new Promise(function(resolve, reject){
 			fb.firebaseapp.auth().signOut().catch(function(error){
 				console.log("alert");
-			});
-			resolve({ uid: null, email: null })
+			}).then(function(){
+				resolve({ uid: null, email: null })	
+			})
 		})
 	},
 

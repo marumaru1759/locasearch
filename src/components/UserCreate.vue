@@ -66,8 +66,8 @@ methods:{
 			this.$store.dispatch('userRegister', {
 				email: this.newemail,
 				password: this.newPass
-			}).then(() => {
-				console.log(this.error);
+			}).then((error) => {
+				console.log(error);
 				this.$router.push('Mypage');
 			});			
 		

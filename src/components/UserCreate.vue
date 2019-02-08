@@ -68,8 +68,8 @@ methods:{
 			this.$store.dispatch('userRegister', {
 				email: this.newemail,
 				password: this.newPass
-			})
-			.then(resolve());
+			});
+			resolve();
 		});
 
 		promise.then(() => {

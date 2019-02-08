@@ -28,7 +28,13 @@ export default {
 			console.log(password);
 			fb.firebaseapp.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
   			// Handle Errors here.
-  				console.log("alert");
+  				var errorCode = error.code;
+  				var errorMessage = error.message;
+  				if (erroCode == 'auth/weak-password'){
+  					reject("Your password is too weak")
+  				} else {
+  					reject(errorMessage)
+  				}
   			}).then(function(){
   				resolve({ uid: fb.firebaseapp.auth().currentUser.uid,  email: fb.firebaseapp.auth().currentUser.email})	
   			})

@@ -30,7 +30,7 @@ export default {
   			// Handle Errors here.
   				var errorCode = error.code;
   				var errorMessage = error.message;
-  				if (erroCode == 'auth/weak-password'){
+  				if (errorCode == 'auth/weak-password'){
   					reject("Your password is too weak")
   				} else {
   					reject(errorMessage)

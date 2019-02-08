@@ -69,7 +69,9 @@ methods:{
 			}).then(() => {
 				console.log("Success");
 				this.$router.push('Mypage');
-			})			
+			})
+
+			console.log("dummy");			
 		
 	}
 

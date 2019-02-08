@@ -63,8 +63,6 @@ methods:{
 
 	userRegister(){
 		// 'userRegister' mutation is committed here
-		
-		const promise = new Promise(( resolve, reject ) => {
 			this.$store.dispatch('userRegister', {
 				email: this.newemail,
 				password: this.newPass
@@ -72,8 +70,6 @@ methods:{
 				console.log("Success");
 				this.$router.push('Mypage');
 			})			
-
-		});	
 		
 	}
 

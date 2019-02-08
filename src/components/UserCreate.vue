@@ -68,14 +68,15 @@ methods:{
 			this.$store.dispatch('userRegister', {
 				email: this.newemail,
 				password: this.newPass
-			})
+			});
+			resolve();
 		});
 
 		promise.then(() => {
 				console.log("Success");
 				this.$router.push('Mypage');
 
-		})
+		});
 
 		
 		

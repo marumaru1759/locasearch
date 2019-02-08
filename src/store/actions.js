@@ -33,6 +33,7 @@ export default{
 			})
 			.catch(function onRejected(error){
 				console.log(error);
+				return error;
 		})		
  
 	}

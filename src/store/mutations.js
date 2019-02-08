@@ -8,7 +8,7 @@ export default {
 	
 	[types.AUTH_LOGOUT](state, payload){
 		state.currentUser = payload
-	},
+	}
 
 }		
 	

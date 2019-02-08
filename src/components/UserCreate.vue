@@ -47,9 +47,16 @@ methods:{
 			email: this.newemail,
 			password: this.newPass
 		})
-		this.newemail = ''
-		this.newPass = ''
-		this.$router.push('/Mypage')
+
+		if(this.newemail === this.$store.state.currentUser.email){
+			this.newemail = '';
+			this.newPass = '';
+			console.log("Success");
+			this.$router.push('/Mypage');	
+		} else {
+			console.log("failed");
+		}
+		
 
 
 	},

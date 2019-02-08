@@ -46,20 +46,19 @@ methods:{
 		this.$store.dispatch('userRegister',{
 			email: this.newemail,
 			password: this.newPass
+		}).then(function(){
+			if(this.newemail === this.$store.state.currentUser.email){
+				this.newemail = '';
+				this.newPass = '';
+				console.log("Success");
+				this.$router.push('Mypage');
+			} else {
+				this.newemail = '';
+				this.newPass = '';
+				console.log("failed");
+			}
 		})
-
-		if(this.newemail === this.$store.state.currentUser.email){
-			this.newemail = '';
-			this.newPass = '';
-			console.log("Success");
-			this.$router.push('/Mypage');	
-		} else {
-			console.log("failed");
-		}
-		
-
-
-	},
+	}
 
 	/*toggleRegistrationStatus(user){
 		// 'toggleRegistrationStatus' mutation is committed here

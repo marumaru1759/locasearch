@@ -47,7 +47,7 @@ methods:{
 			email: this.newemail,
 			password: this.newPass
 		}).then(function(){
-			if( newemail === this.$store.state.currentUser.email){
+			if( this.$store.state.currentUser.email){
 				this.newemail = '';
 				this.newPass = '';
 				console.log("Success");

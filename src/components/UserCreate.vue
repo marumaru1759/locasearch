@@ -67,7 +67,7 @@ methods:{
 				email: this.newemail,
 				password: this.newPass
 			}).then(() => {
-				console.log("Success");
+				console.log(this.error);
 				this.$router.push('Mypage');
 			});			
 		

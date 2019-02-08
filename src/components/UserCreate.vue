@@ -46,8 +46,9 @@ methods:{
 		this.$store.dispatch('userRegister',{
 			email: this.newemail,
 			password: this.newPass
-		}).then(function(){
-			if( this.$store.state.currentUser.email){
+		})
+		.then(function(){
+			if( this.newemail === this.$store.state.currentUser.email){
 				this.newemail = '';
 				this.newPass = '';
 				console.log("Success");
@@ -62,7 +63,7 @@ methods:{
 }
 
 }
-	
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

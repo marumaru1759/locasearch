@@ -25,8 +25,7 @@ export default{
 	},
 
 	userRegister({ commit }, { email, password }){
-		return new Promise(function(resolve, reject){
-			Auth.userRegister(email, password)
+		return Auth.userRegister(email, password)
 			.then(function onFulfilled({ uid, email }){
 				console.log(uid);
 				console.log(email);
@@ -35,8 +34,7 @@ export default{
 			.catch(function onRejected(error){
 				console.log(error);
 		})		
-
-		}) 
+ 
 	}
 
 

@@ -41,7 +41,7 @@ data() {
 	},
 
 methods:{
-	userRegister(){
+	/*userRegister(){
 		// 'userRegister' mutation is committed here
 		this.$store.dispatch('userRegister',{
 			email: this.newemail,
@@ -59,7 +59,29 @@ methods:{
 				console.log("failed");
 			}
 		})
+	},*/
+
+	userRegister(){
+		// 'userRegister' mutation is committed here
+		
+		const promise = new Promise(( resolve, reject ) => {
+			this.$store.dispatch('userRegister', {
+				email: this.newemail,
+				password: this.newPass
+			})
+		});
+
+		promise.then(() => {
+				console.log("Success");
+				this.$router.push('Mypage');
+
+		})
+
+		
+		
 	}
+
+
 }
 
 }

@@ -9,7 +9,6 @@ Vue.use(Vuex)
 const state = {
 	auth: {
 		token: null,
-		userId: null
 	},
 	board:{
 		Lists: []

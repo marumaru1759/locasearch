@@ -59,6 +59,7 @@ methods:{
 			}
 		})
 	}
+}
 
 	
 </script>

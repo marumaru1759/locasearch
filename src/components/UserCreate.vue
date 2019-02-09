@@ -23,7 +23,7 @@
                 <button type="submit" class="btn btn-primary btn-block">登録</button>
               </div>
               <ul>
-  				<li class ="alert-warning" v-if="validation.loginerror.required">{{ loginerror }}</li>
+  				<li class ="alert-warning" v-if="loginerror">{{ loginerror }}</li>
   			  </ul>
             </div>
 
@@ -48,26 +48,6 @@ data() {
 	},
 
 methods:{
-	/*userRegister(){
-		// 'userRegister' mutation is committed here
-		this.$store.dispatch('userRegister',{
-			email: this.newemail,
-			password: this.newPass
-		})
-		.then(function(){
-			if( this.newemail === this.$store.state.currentUser.email){
-				this.newemail = '';
-				this.newPass = '';
-				console.log("Success");
-				this.$router.push('Mypage');
-			} else {
-				this.newemail = '';
-				this.newPass = '';
-				console.log("failed");
-			}
-		})
-	},*/
-
 	userRegister(){
 		// 'userRegister' mutation is committed here
 			this.$store.dispatch('userRegister', {

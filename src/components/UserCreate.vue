@@ -22,20 +22,16 @@
               <div class="col-xs-offset-2 col-xs-10">
                 <button type="submit" class="btn btn-primary btn-block">登録</button>
               </div>
-              
             </div>
 
-
-
-
         　</form> 
-    　 
-		</div>
-			<div class="col-xs-6 col-xs-offset-3">
+        	<div class="col-xs-6 col-xs-offset-3">
         		<ul>
   					<li class="text-danger" v-if="loginerror">{{ loginerror }}</li>
   				</ul>
-        	</div>
+       		</div>
+    　 
+		</div>
     </div>
 </template>
 

@@ -28,7 +28,7 @@
   							class = "form-control"
   						>
   					<ul>
-  						<li class ="midlang" v-if="!validation.password.required">Password is mandatory</li>
+  						<li class ="text-danger" v-if="!validation.password.required">Password is mandatory</li>
   					</ul>
   					</div>
               </div>                

@@ -23,7 +23,7 @@
                 <button type="submit" class="btn btn-primary btn-block">登録</button>
               </div>
               <ul>
-  				<li class ="alert" v-if="loginerror">{{ loginerror }}</li>
+  				<li class="text-danger" v-if="loginerror">{{ loginerror }}</li>
   			  </ul>
             </div>
 

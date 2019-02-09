@@ -56,7 +56,7 @@ methods:{
 			}).then((error) => {
 				if(error) { 
 					console.log(error);
-					loginerror = error;
+					this.loginerror = error;
 				} else {
 					console.log("success");
 					this.$router.push('Mypage');

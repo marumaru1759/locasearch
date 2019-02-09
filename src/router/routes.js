@@ -20,7 +20,7 @@ export default [{
 },{
 	path: '/Mypage',
 	component: MyPage,
-	//meta: { requiresAuth: true }
+	meta: { requiresAuth: true }
 },{
 	path: '*',
 	redirect: '/'

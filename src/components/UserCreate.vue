@@ -22,7 +22,13 @@
               <div class="col-xs-offset-2 col-xs-10">
                 <button type="submit" class="btn btn-primary btn-block">登録</button>
               </div>
+              <ul>
+  				<li class ="alert-warning" v-if="validation.loginerror.required">{{ loginerror }}</li>
+  			  </ul>
             </div>
+
+
+
         　</form> 
 
              
@@ -36,7 +42,8 @@ export default {
 data() {
 	return { 
 			 newemail: '',
-			 newPass: ''
+			 newPass: '',
+			 loginerror: ''
 			}
 	},
 
@@ -69,6 +76,7 @@ methods:{
 			}).then((error) => {
 				if(error) { 
 					console.log(error);
+					loginerror = error;
 				} else {
 					console.log("success");
 					this.$router.push('Mypage');

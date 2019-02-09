@@ -29,14 +29,13 @@
 
 
         　</form> 
-
-          <div class="col-xs-6 col-xs-offset-3">
-        	<ul>
-  				<li class="text-danger" v-if="loginerror">{{ loginerror }}</li>
-  			</ul>
-          </div>
     　 
 		</div>
+			<div class="col-xs-6 col-xs-offset-3">
+        		<ul>
+  					<li class="text-danger" v-if="loginerror">{{ loginerror }}</li>
+  				</ul>
+        	</div>
     </div>
 </template>
 

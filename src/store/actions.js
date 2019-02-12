@@ -3,7 +3,7 @@ import { Auth, List, Task } from '../api'
 
 export default{
 	login({ commit }, authInfo ) {
-		Auth.login(authInfo)
+		return Auth.login(authInfo)
 		.then(function onFulfilled({ uid, email }){
 			console.log(uid);
 			console.log(email);

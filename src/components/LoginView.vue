@@ -1,5 +1,5 @@
 <template>
-	<div class="row">
+	<div>
    		<div class="col-xs-6 col-xs-offset-3">
    	<h1>Login</h1>
    	<loginForm :onlogin="handleLogin" />

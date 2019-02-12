@@ -4,6 +4,9 @@
    	<h1>Login</h1>
    	<loginForm :onlogin="handleLogin" />
    		</div>
+   		<ul>
+  			<li class="text-danger" v-if="loginerror">{{ loginerror }}</li>
+  		</ul>
    	</div>
 </template>
 

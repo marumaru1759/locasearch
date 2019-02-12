@@ -4,10 +4,12 @@ import * as fb from './firebase'
 export default {
 	login: authInfo => {
 		return new Promise(function (resolve, reject){
-			fb.firebaseapp.auth().signInWithEmailAndPassword(authInfo.email, authInfo.password).catch(function(error){
-				console.log("alert");
+			fb.firebaseapp.auth().signInWithEmailAndPassword(authInfo.email, authInfo.password)
+			.catch(function(error){
+				var errorCode = error.code;
+				var errorMessage = error.message;
+				reject(errorMessage)
 			}).then(function(){
-				console.log(fb.firebaseapp.auth().currentUser.displayName);
 				resolve({ uid: fb.firebaseapp.auth().currentUser.uid,  email: fb.firebaseapp.auth().currentUser.email})	
 			})
 		})
@@ -27,7 +29,8 @@ export default {
 		return new Promise(function(resolve, reject){
 			console.log(email);
 			console.log(password);
-			fb.firebaseapp.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+			fb.firebaseapp.auth().createUserWithEmailAndPassword(email, password)
+			.catch(function(error) {
   			// Handle Errors here.
   				var errorCode = error.code;
   				var errorMessage = error.message;

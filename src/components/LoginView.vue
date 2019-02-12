@@ -17,11 +17,24 @@ export default {
 		loginForm
 	},
 
+	data() {
+	return { 
+			 loginerror: ''
+			}
+	},
+
 methods:{
 	handleLogin(authInfo){
 		return this.$store.dispatch('login', authInfo)
-			.then(() => {
-				this.$router.push({ path: '/Mypage'})
+			.then((error) => {
+				if(error){
+					console.log(error);
+					this.loginerror = error;
+				} else {
+					console.log("success");
+					this.$router.push({ path: '/Mypage'})
+				}
+				
 			})
 			.catch(err => this.throwReject(err))
 	},

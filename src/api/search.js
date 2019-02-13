@@ -11,7 +11,7 @@ export default {
 			.catch(function(error){
 				reject("error")
 			}).then(function(){
-				resolve(title.getProperty('textContent');	
+				resolve(title.getProperty('textContent'))	
 			})
 		})
 	},

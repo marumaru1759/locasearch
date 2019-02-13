@@ -1,5 +1,7 @@
 import Auth from './auth'
+import Search from './search'
 
 export{
-	Auth
+	Auth,
+	Search
 }

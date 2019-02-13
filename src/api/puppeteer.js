@@ -6,8 +6,8 @@ import * as pptr from 'puppeteer';
 		slowMo: 50,
 	});
 
-export const page = await browser.newPage();
-
 })
+
+export const page = browser.newPage();
 
 

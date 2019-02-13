@@ -4,8 +4,7 @@
         <div class="inner">
           <h3 class="masthead-brand">Hi {{ user.email }}</h3>
           <nav class="nav nav-masthead justify-content-end">
-            <router-link to="/info" class="nav-link">お知らせ</router-link>
-            <a href="#" @click="logoutclick" class="nav-link">Logout</a>
+            <a href="#" @click="googleSearch" class="nav-link">Push</a>
           </nav>
         </div>
     </header>
@@ -25,12 +24,8 @@ computed:{
 },
 
 methods:{
-	logoutclick(){
-		return this.$store.dispatch('logout')
-			.then(() => {
-				this.$router.push({ path: '/'})
-			})
-			.catch(err => this.throwReject(err))
+	googleSearch(){
+		return this.$store.dispatch('googleSearch')
 		}
 	}
 }
